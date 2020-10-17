@@ -10,11 +10,14 @@
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/showcase.css">
         <link rel="stylesheet" href="css/main-content.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <script src="https://kit.fontawesome.com/83c6fc4c61.js"></script>
     <body>
         <header>
             <div class="container">
-                <div class="site-name">
+                <div class="top-header">
                     <h1>ww news</h1>
+                    <i class="bars fas fa-bars"></i>
                 </div>
                 <nav>
                     <ul>
@@ -48,7 +51,7 @@
                         patients.
                     </p>
                 </article>
-                <article class="main-art">
+                <article class="main-art" id="main-article">
                     <img src="img/img-article-two.jpg" alt="Brexit">
                     <a href="#">Brexit: Trade talks with the EU are over, says No 10</a>
                     <p> Talks between the UK and EU over a post-Brexit trade agreement are "over", Downing Street has 
@@ -136,16 +139,19 @@
         </aside>
         <aside class="most-viewed">
                 <p>Most viewed articles</p>
-                <ol>
-                    <a href="#">
-                        Solidarity Therapeutics Trial produces conclusive evidence on the effectiveness of repurposed 
-                        drugs for COVID-19 in record time.
-                    </a>
-                    <a href="#">Brexit: Trade talks with the EU are over, says No 10</a>
-                    <a href="#">Hidden camera's hugging tiger wins wildlife photo award</a>
-                    <a href="#">Reaching 130 million girls with no access to school</a>
-                    <a href="#">The wearable cyborgs that use brain waves to power up your muscles</a>
-                </ol>
+                <div>
+                    <ol>
+                        <li>
+                            <a href="#">
+                                Solidarity Therapeutics Trial produces conclusive evidence on the effectiveness of 
+                                repurposed drugs for COVID-19 in record time.
+                            </a>
+                        <li><a href="#">Brexit: Trade talks with the EU are over, says No 10</a></li>
+                        <li><a href="#">Hidden camera's hugging tiger wins wildlife photo award</a></li>
+                        <li><a href="#">Reaching 130 million girls with no access to school</a></li>
+                        <li><a href="#">The wearable cyborgs that use brain waves to power up your muscles</a></li>
+                    </ol>
+                </div>
         </aside>
         <aside>
             <div class="container">
@@ -153,17 +159,18 @@
             </div>
         </aside>
         <footer>
-            <span>
-                <i>icon facebook</i>
-                <i>icon face msn</i>
-                <i>icon twitter</i>
-                <i>icon whatsapp</i>
-                <i>icon share</i>
+            <span class="icons"> 
+                <i id="fac" class="fab fa-facebook-f"></i>
+                <i id="msn" class="fab fa-facebook-messenger"></i>
+                <i id="tw" class="fab fa-twitter"></i>
+                <i id="envelop" class="fas fa-envelope-square"></i>
+                <i id="share" class="fas fa-share-alt"></i>
             </span>
             <div class="minor-info">
-                <span class="link"><a href="#">Contact us</a></span>
-                <span class="link"><a href="#">Terms of Service</a></span>
-                <span class="link"><a href="#">Privacy Policy</a></span>
+                <span><a href="#">Contact us</a></span>
+                <span><a href="#">About us</a></span>
+                <span><a href="#">Terms of Service</a></span>
+                <span><a href="#">Privacy Policy</a></span>
             </div>
             <p>WW NEWS, Copiright &copy; 2020</p>
         </footer> 
