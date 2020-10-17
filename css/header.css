@@ -39,15 +39,6 @@ header a {
     text-transform: capitalize;
 }
 
-header ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    background-color: #282828;
-}
-
 header li {
     width: 100%;
     border: 1px solid #fff;
@@ -57,4 +48,22 @@ header li {
 
 header li:hover {
     background-color: #5a5a5a;
+}
+
+@media screen and (min-width: 481px) {
+    nav {
+        display: inline;
+    }
+
+    header ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #282828;
+    }
+
+    .top-header .bars {
+        display: none;
+    }
 }
