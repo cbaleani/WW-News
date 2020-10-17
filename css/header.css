@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    overflow: hidden;
 }
 
 .site-name {
@@ -17,7 +16,7 @@ body {
 
 h1 {
     min-height: 40px;
-    padding: 20px;
+    padding: 10px;
     margin: 20px 0 0 0;
     font-weight:700;
     font-size: 48px;
@@ -47,7 +46,6 @@ header ul {
 
 header li {
     width: 100%;
-    padding: 10px;
     border: 1px solid #fff;
     border-style: groove;
     list-style-type: none;
