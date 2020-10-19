@@ -9,14 +9,13 @@ footer {
     font-size: 18px;
 }
 .icons {
+    display: flex;
     padding-top: 20px;
     border-top: 2px solid #ddd;
 }
 
 .icons i {
-    display: inline;
     padding: 12px;
-    margin: 6px;
     background-color: #fafafa;
     border: 1px solid #fafafa;
     font-size: xx-large;

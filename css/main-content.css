@@ -10,7 +10,7 @@
 
 .article {
     box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2), 20px 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 10px;
+    padding: 5px;
 }
 
 .article img {
@@ -218,12 +218,11 @@ form .button {
     background-color: #ccc;
 }
 
-
 .container-ads .ads {
     max-width: 100%;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 481px) and (max-width: 523px) {
     .main-content {
         display: flex;
         text-align: left;
@@ -233,21 +232,194 @@ form .button {
         align-self: flex-start;
     }
 
+    .article {
+        box-shadow: none;
+    }
+
     .secondary-news {
         display: flex;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    
+    .secondary {
+        flex-basis: 46%;
+        box-shadow: none;
+        border: 1px solid #d2d2d2;
+    }
+
+    .first-secondary {
+        display: flex;
+        flex: 2;
+    }
+
+    .last-secondary {
+        display: flex;
+        flex: 2;
+    }
+
+    .content-and-sidebar {
+        display: flex;
+    }
+
+    .sidebar {
+        margin-left: 10px;
+    }
+
+    form .title {
+        font-size: 18px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    form .email {
+        font-size: 10px;
+    }
+
+    form .button {
+        font-size: 14px;
+    }
+
+    .list-most-viewed p {
+        font-size: 16px;
+    }
+
+    .list-most-viewed a {
+        font-size: 14px;
+    }
+
+    .list-most-viewed ol {
+        margin: 10px 0 10px 20px;
+    }
+
+    .more-news {
+        font-size: 26px;
+    }
+}
+
+@media screen and (min-width: 524px) and (max-width: 900px) {
+    .main-content {
+        display: flex;
+        text-align: left;
     }
 
     .article {
         box-shadow: none;
+    }
+
+    .main-picture {
+        align-self: flex-start;
+    }
+
+    .secondary-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .secondary {
+        flex-basis: 46%;
+        box-shadow: none;
         border: 1px solid #d2d2d2;
+    }
+
+    .first-secondary {
+        display: flex;
+        flex: 2;
+    }
+
+    .last-secondary {
+        display: flex;
+        flex: 2;
+    }
+
+    .content-and-sidebar {
+        display: flex;
+    }
+
+    .sidebar {
+        margin-left: 10px;
+    }
+
+    .sidebar form {
+        padding: 15px;
+    }
+
+    .icon-and-title {
+        padding: 0 0  0 10px;
+    }
+
+    form .title {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    form .email {
+        font-size: 10px;
+    }
+
+    form .button {
+        font-size: 14px;
+    }
+
+    .list-most-viewed p {
+        font-size: 16px;
+    }
+
+    .list-most-viewed a {
+        font-size: 14px;
+        line-height: 12px;
+    }
+
+    .list-most-viewed ol {
+        margin: 10px 0 10px 20px;
+    }
+
+    .more-news {
+        font-size: 26px;
     }
 
     .other-news {
         display: flex;
         flex-wrap: wrap;
     }
-    
+
+    .more-articles {
+        flex-basis: 50%;
+        padding: 15px;
+        margin: 0;
+        box-sizing: border-box;
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
+@media screen and (min-width: 901px) {
+    .content-and-sidebar {
+        display: flex;
+    }
+
+    .article {
+        box-shadow: none;
+    }
+
+    .sidebar {
+        margin-left: 10px;
+    }
+
+    .secondary-news {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .other-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .more-articles {
         flex-basis: 33.333%;
         padding: 15px;
@@ -256,9 +428,4 @@ form .button {
         box-shadow: none;
         border: 1px solid #000;
     }
-
-    .content-and-sidebar {
-        display: flex;
-    }
-}    
-
+}

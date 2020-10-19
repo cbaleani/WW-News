@@ -56,7 +56,29 @@ header li:hover {
     background-color: #5a5a5a;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 480px) and (max-width: 523px) {
+    nav {
+        display: inline;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+
+    header ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #282828;
+    }
+
+    .top-header .bars {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 524px) {
     nav {
         display: inline;
     }
@@ -72,4 +94,7 @@ header li:hover {
     .top-header .bars {
         display: none;
     }
-}
+} 
+
+
+
