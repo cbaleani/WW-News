@@ -15,10 +15,6 @@
     border-radius: 10px;
 }
 
-.main-picture-alt {
-    display: none;
-}
-
 .article a {
     display: block;
     margin-bottom: 10px;
@@ -193,6 +189,14 @@ form .button {
 
 
 @media screen and (min-width: 481px) {
+    .main-content {
+        display: flex;
+    }
+
+    .main-picture {
+        align-self: flex-start;
+    }
+
     .secondary-news {
         display: flex;
         justify-content: space-evenly;
@@ -202,12 +206,19 @@ form .button {
         box-shadow: none;
         border: 1px solid #d2d2d2;
     }
-    
-    .main-content {
-        display: flex;
-    }
 
-    .main-picture {
-        align-self: flex-start;
+    .other-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .more-articles {
+        flex-basis: 33.333%;
+        padding: 15px;
+        margin: 0;
+        box-sizing: border-box;
+        box-shadow: none;
+        border: 1px solid #000;
     }
 }    
+
