@@ -5,17 +5,21 @@ footer {
     margin-top: 10px;
 }
 
+.find-us {
+    font-size: 18px;
+}
 .icons {
     padding-top: 20px;
-    border-top: 2px solid #999;
+    border-top: 2px solid #ddd;
 }
 
 .icons i {
     display: inline;
-    padding: 15px;
-    margin: 2px;
+    padding: 12px;
+    margin: 6px;
     background-color: #fafafa;
     border: 1px solid #fafafa;
+    font-size: xx-large;
 }
 
 #fac {
@@ -78,7 +82,7 @@ footer {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
     text-decoration: none;
     color: #000;
 }
@@ -90,13 +94,12 @@ footer {
 
 footer p {
     margin: 5px 0 0 2px;
-    padding: 7px;
-    border-bottom: 1px solid #000;
+    padding: 10px;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #000;
+    font-family: 'Lato', sans-serif;
+    color: #333;
 }
 
 @media screen and (min-width: 481px) {

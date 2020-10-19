@@ -9,12 +9,13 @@
     background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/background_image.jpg");
     background-size: cover;
     font-size: 16px;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     color: #fff;  
 }
 
 .site-description h2 {
+    font-weight: 200;
     font-size: 36px;
     text-transform: capitalize;
 }
