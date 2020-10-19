@@ -86,10 +86,15 @@
     color: #000;
 }
 
-form {
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar form {
     display: flex;
     flex-flow: column wrap;
-    padding: 15px;
+    padding: 15px 0;
     background-color: #205077;
 }
 
@@ -118,7 +123,7 @@ form span {
 }
 
 form .email {
-    margin: 5px 5px;
+    margin: 5px 4px;
     padding: 7px;
     background-color: #fafafa;
     border: 0;
@@ -130,8 +135,8 @@ form .email {
 }
 
 form .button {
-    padding: 10px;
-    margin: 5px;
+    padding: 9px;
+    margin: 5px 2px;
     background-color: #333;
     border: 1px solid #333;
     font-weight:800;
@@ -141,12 +146,12 @@ form .button {
     color:#fff;
 }
 
-.most-viewed {
+.list-most-viewed {
     margin-top: 10px;
     background-color: #eee;
 }
 
-.most-viewed p {
+.list-most-viewed p {
     padding: 20px 10px;
     margin: 0;
     border: 6px solid #c44911;
@@ -159,7 +164,7 @@ form .button {
     color: #000;
 }
 
-.most-viewed a {
+.list-most-viewed a {
     padding-bottom: 25px;
     font-weight:700;
     font-size: 16px;
@@ -168,7 +173,7 @@ form .button {
     color: #000;
 }
 
-.most-viewed ol {
+.list-most-viewed ol {
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -177,12 +182,12 @@ form .button {
     font-weight: 700;
 }
 
-.most-viewed li {
+.list-most-viewed li {
     padding: 10px;
     margin: 5px;
 }
 
-.container .ads {
+.container-ads .ads {
     max-width: 100%;
     min-height: 40%;
 }
@@ -191,6 +196,7 @@ form .button {
 @media screen and (min-width: 481px) {
     .main-content {
         display: flex;
+        text-align: left;
     }
 
     .main-picture {
