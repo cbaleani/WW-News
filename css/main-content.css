@@ -1,5 +1,5 @@
 .content-and-sidebar {
-    padding-bottom: 16px;
+    padding: 10px 0 16px 10px;
 }
 
 .article, .more-articles {
@@ -10,7 +10,6 @@
 
 .article {
     box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2), 20px 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 5px;
 }
 
 .article img {
@@ -40,6 +39,10 @@
     font-family: 'Lato', sans-serif;
     text-align: left;
     color: #000;
+}
+
+.secondary-news .article {
+    padding: 5px;
 }
 
 .other-news {
@@ -223,7 +226,7 @@ form .button {
 }
 
 @media screen and (min-width: 481px) and (max-width: 523px) {
-    .main-content {
+    .primary-new {
         display: flex;
         text-align: left;
     }
@@ -299,7 +302,7 @@ form .button {
 }
 
 @media screen and (min-width: 524px) and (max-width: 900px) {
-    .main-content {
+    .primary-new {
         display: flex;
         text-align: left;
     }
