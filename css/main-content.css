@@ -1,5 +1,5 @@
 .content-and-sidebar {
-    padding: 5px;
+    padding: 5px 2px;
 }
 
 .article, .articles-other-news {
@@ -25,6 +25,7 @@
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     text-decoration: none;
+    text-align: center;
     color: #000;
 }
 
@@ -37,7 +38,7 @@
     font-size: 14px;
     line-height: 15px;
     font-family: 'Lato', sans-serif;
-    text-align: left;
+    text-align: center;
     color: #000;
 }
 
@@ -226,7 +227,99 @@ form .button {
     max-width: 100%;
 }
 
-@media screen and (min-width: 481px) and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .primary-new {
+        display: flex;
+        text-align: left;
+    }
+
+    .article {
+        box-shadow: none;
+        padding: 5px;
+    }
+
+    .article p {
+        margin-bottom: 10px;
+    }
+
+    .secondary-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .secondary {
+        flex-basis: 100%;
+        box-shadow: none;
+        border: 1px solid #d2d2d2;
+    }
+
+    .content-and-sidebar {
+        display: flex;
+        padding: 10px 0px 16px 0;
+    }
+
+    .sidebar {
+        margin-left: 10px;
+    }
+
+    .sidebar form {
+        padding: 15px;
+    }
+
+    .icon-and-title {
+        padding: 0 0  0 10px;
+    }
+
+    form .title {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    form p {
+        font-size: 12px;
+    }
+
+    form .email {
+        font-size: 10px;
+    }
+
+    form .button {
+        font-size: 14px;
+    }
+
+    .list-most-viewed p {
+        font-size: 16px;
+    }
+
+    .list-most-viewed a {
+        font-size: 14px;
+        line-height: 12px;
+    }
+
+    .list-most-viewed ol {
+        margin: 10px 0 10px 20px;
+    }
+
+    .more-news {
+        font-size: 26px;
+    }
+
+    .other-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .articles-other-news {
+        flex-basis: 46.6%;
+        padding: 15px;
+        margin: 5px;
+        box-sizing: border-box;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
     .primary-new {
         display: flex;
         text-align: left;
@@ -246,19 +339,13 @@ form .button {
     }
 
     .secondary {
-        flex-basis: 50%;
+        flex-basis: 47.2%;
         box-shadow: none;
-        border: 1px solid #d2d2d2;
+        background-color: #fff;
     }
 
-    .secondary-news article:first-child {
-        display: flex;
-        flex: 2;
-    }
-
-    .secondary-news article:last-child {
-        display: flex;
-        flex: 2;
+    .secondary-news .secondary:last-child {
+        flex-basis: 100%;
     }
 
     .content-and-sidebar {
@@ -327,7 +414,7 @@ form .button {
     }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .primary-new {
         display: flex;
         text-align: left;
@@ -352,19 +439,9 @@ form .button {
     }
 
     .secondary {
-        flex-basis: 50%;
+        flex-basis: 31.6%;
         box-shadow: none;
-        border: 1px solid #d2d2d2;
-    }
-
-    .secondary-news article:first-child {
-        display: flex;
-        flex: 2;
-    }
-    
-    .secondary-news article:last-child {
-        display: flex;
-        flex: 2;
+        background-color: #fff;
     }
     
     .content-and-sidebar {
@@ -424,7 +501,7 @@ form .button {
     }
     
     .articles-other-news {
-        flex-basis: 32%;
+        flex-basis: 31.66%;
         padding: 15px;
         margin: 5px;
         box-sizing: border-box;
@@ -439,6 +516,115 @@ form .button {
     .articles-other-news p {
         font-size: 16px;
         line-height: 16px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .primary-new {
+        display: flex;
+        text-align: left;
+    }
+
+    .article {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .article a {
+        font-size: 22px;
+        padding-left: 5px;
+    }
+
+    .article p {
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    
+    .secondary-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .secondary {
+        flex-basis: 31.6%;
+        box-shadow: none;
+        background-color: #fff;
+    }
+    
+    .content-and-sidebar {
+        display: flex;
+        padding: 10px 0 16px 0;
+    }
+
+    .sidebar {
+        margin-left: 10px;
+    }
+
+    .sidebar form {
+        padding: 10px;
+    }
+
+    .icon-and-title {
+        padding: 0 0  0 10px;
+    }
+
+    form .title {
+        text-align: left;
+        font-size: 22px;
+    }
+    
+    form p {
+        font-size: 15px;
+    }
+    
+    form .email {
+        font-size: 10px;
+    }
+
+    form .button {
+        font-size: 16px;
+    }
+    
+    .list-most-viewed p {
+        font-size: 22px;
+    }
+    
+    .list-most-viewed a {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    .list-most-viewed ol {
+        margin: 10px 0 10px 10px;
+    }
+    
+    .more-news {
+        font-size: 36px;
+    }
+    
+    .other-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .articles-other-news {
+        flex-basis: 31.66%;
+        padding: 15px;
+        margin: 5px;
+        box-sizing: border-box;
+        box-shadow: none;
+        border-radius: 5px;
+    }
+
+    .articles-other-news a {
+        font-size: 22px;
+    }
+
+    .articles-other-news p {
+        font-size: 18px;
+        line-height: 18px;
     }
 }
 
