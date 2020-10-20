@@ -1,8 +1,8 @@
 .content-and-sidebar {
-    padding: 10px 0 16px 10px;
+    padding: 5px;
 }
 
-.article, .more-articles {
+.article, .articles-other-news {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@
 }
 
 .article p {
-    margin: 0;
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 15px;
     font-family: 'Lato', sans-serif;
@@ -47,7 +47,6 @@
 
 .other-news {
     margin-top: 0;
-    background-color: #ddd;
 }
 
 .more-news {
@@ -64,17 +63,19 @@
     color: #fff; 
 }
 
-.more-articles {
+.articles-other-news {
     box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2), 20px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ddd;
+    margin: 5px;
 }
 
-.more-articles img {
+.articles-other-news img {
     max-width: 100%;
     margin-top: 5px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-.more-articles a {
+.articles-other-news a {
     padding-top: 10px;
     margin-left: 5px;
     font-weight:700;
@@ -84,11 +85,11 @@
     color: #000;
 }
 
-.more-articles a:hover {
+.articles-other-news a:hover {
     color: #c44911;
 }
 
-.more-articles p {
+.articles-other-news p {
     margin-left: 5px;
     font-size: 14px;
     line-height: 15px;
@@ -225,83 +226,7 @@ form .button {
     max-width: 100%;
 }
 
-@media screen and (min-width: 481px) and (max-width: 523px) {
-    .primary-new {
-        display: flex;
-        text-align: left;
-    }
-
-    .main-picture {
-        align-self: flex-start;
-    }
-
-    .article {
-        box-shadow: none;
-    }
-
-    .secondary-news {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .secondary {
-        flex-basis: 46%;
-        box-shadow: none;
-        border: 1px solid #d2d2d2;
-    }
-
-    .first-secondary {
-        display: flex;
-        flex: 2;
-    }
-
-    .last-secondary {
-        display: flex;
-        flex: 2;
-    }
-
-    .content-and-sidebar {
-        display: flex;
-    }
-
-    .sidebar {
-        margin-left: 10px;
-    }
-
-    form .title {
-        font-size: 18px;
-    }
-
-    form p {
-        font-size: 12px;
-    }
-
-    form .email {
-        font-size: 10px;
-    }
-
-    form .button {
-        font-size: 14px;
-    }
-
-    .list-most-viewed p {
-        font-size: 16px;
-    }
-
-    .list-most-viewed a {
-        font-size: 14px;
-    }
-
-    .list-most-viewed ol {
-        margin: 10px 0 10px 20px;
-    }
-
-    .more-news {
-        font-size: 26px;
-    }
-}
-
-@media screen and (min-width: 524px) and (max-width: 900px) {
+@media screen and (min-width: 481px) and (max-width: 900px) {
     .primary-new {
         display: flex;
         text-align: left;
@@ -311,33 +236,34 @@ form .button {
         box-shadow: none;
     }
 
-    .main-picture {
-        align-self: flex-start;
+    .article p {
+        margin-bottom: 10px;
     }
 
     .secondary-news {
         display: flex;
         flex-wrap: wrap;
     }
-    
+
     .secondary {
-        flex-basis: 46%;
+        flex-basis: 50%;
         box-shadow: none;
         border: 1px solid #d2d2d2;
     }
 
-    .first-secondary {
+    .secondary-news article:first-child {
         display: flex;
         flex: 2;
     }
 
-    .last-secondary {
+    .secondary-news article:last-child {
         display: flex;
         flex: 2;
     }
 
     .content-and-sidebar {
         display: flex;
+        padding: 10px 0 16px 0;
     }
 
     .sidebar {
@@ -391,44 +317,135 @@ form .button {
         flex-wrap: wrap;
     }
 
-    .more-articles {
-        flex-basis: 50%;
+    .articles-other-news {
+        flex-basis: 46.6%;
         padding: 15px;
-        margin: 0;
+        margin: 5px;
         box-sizing: border-box;
         box-shadow: none;
-        border: 1px solid #000;
+        border-radius: 5px;
     }
 }
+
 @media screen and (min-width: 901px) {
-    .content-and-sidebar {
+    .primary-new {
         display: flex;
+        text-align: left;
     }
 
     .article {
         box-shadow: none;
     }
 
-    .sidebar {
-        margin-left: 10px;
+    .article a {
+        font-size: 18px;
     }
 
+    .article p {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
     .secondary-news {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .other-news {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .more-articles {
-        flex-basis: 33.333%;
+    .secondary {
+        flex-basis: 50%;
+        box-shadow: none;
+        border: 1px solid #d2d2d2;
+    }
+
+    .secondary-news article:first-child {
+        display: flex;
+        flex: 2;
+    }
+    
+    .secondary-news article:last-child {
+        display: flex;
+        flex: 2;
+    }
+    
+    .content-and-sidebar {
+        display: flex;
+        padding: 10px 0 16px 0;
+    }
+
+    .sidebar {
+        margin-left: 10px;
+    }
+
+    .sidebar form {
+        padding: 10px;
+    }
+
+    .icon-and-title {
+        padding: 0 0  0 10px;
+    }
+
+    form .title {
+        text-align: left;
+        font-size: 20px;
+    }
+    
+    form p {
+        font-size: 14px;
+    }
+    
+    form .email {
+        font-size: 10px;
+    }
+
+    form .button {
+        font-size: 16px;
+    }
+    
+    .list-most-viewed p {
+        font-size: 16px;
+    }
+    
+    .list-most-viewed a {
+        font-size: 16px;
+        line-height: 12px;
+    }
+    
+    .list-most-viewed ol {
+        margin: 10px 0 10px 10px;
+    }
+    
+    .more-news {
+        font-size: 32px;
+    }
+    
+    .other-news {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .articles-other-news {
+        flex-basis: 32%;
         padding: 15px;
-        margin: 0;
+        margin: 5px;
         box-sizing: border-box;
         box-shadow: none;
-        border: 1px solid #000;
+        border-radius: 5px;
+    }
+
+    .articles-other-news a {
+        font-size: 18px;
+    }
+
+    .articles-other-news p {
+        font-size: 16px;
+        line-height: 16px;
     }
 }
+
+    
+
+
+
+
+
+
