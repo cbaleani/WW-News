@@ -2,7 +2,7 @@
     padding: 5px 2px;
 }
 
-.article, .articles-other-news {
+.article, .secondary-news article, .articles-other-news {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,8 +42,39 @@
     color: #000;
 }
 
-.secondary-news .article {
+.secondary-news article {
     padding: 5px;
+    box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2), 20px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.secondary-news article img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.secondary-news article a {
+    display: block;
+    margin-bottom: 10px;
+    font-weight:700;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+
+.secondary-news article a:hover {
+    color: #c44911;
+}
+
+.secondary-news article p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 15px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #000;
 }
 
 .other-news {
@@ -247,10 +278,15 @@ form .button {
         flex-wrap: wrap;
     }
 
-    .secondary {
+    .secondary-news article {
         flex-basis: 100%;
+        padding: 5px;
         box-shadow: none;
         border: 1px solid #d2d2d2;
+    }
+
+    .secondary-news article p {
+        margin-bottom: 10px;
     }
 
     .content-and-sidebar {
@@ -338,13 +374,17 @@ form .button {
         flex-wrap: wrap;
     }
 
-    .secondary {
+    .secondary-news article {
         flex-basis: 47.2%;
         box-shadow: none;
         background-color: #fff;
     }
 
-    .secondary-news .secondary:last-child {
+    .secondary-news article p {
+        margin-bottom: 10px;
+    }
+
+    .secondary-news article:last-child {
         flex-basis: 100%;
     }
 
@@ -438,10 +478,19 @@ form .button {
         flex-wrap: wrap;
     }
 
-    .secondary {
+    .secondary-news article {
         flex-basis: 31.6%;
         box-shadow: none;
         background-color: #fff;
+    }
+
+    .secondary-news article a {
+        font-size: 18px;
+    }
+
+    .secondary-news article p {
+        margin-bottom: 10px;
+        font-size: 16px;
     }
     
     .content-and-sidebar {
@@ -547,10 +596,23 @@ form .button {
         flex-wrap: wrap;
     }
 
-    .secondary {
+    .secondary-news article {
         flex-basis: 31.6%;
+        padding: 5px;
         box-shadow: none;
         background-color: #fff;
+    }
+
+    .secondary-news article a {
+        font-size: 22px;
+        padding-left: 5px;
+    }
+
+    .secondary-news article p {
+        margin-bottom: 10px;
+        padding-left: 5px;
+        font-size: 18px;
+        line-height: 18px;
     }
     
     .content-and-sidebar {
