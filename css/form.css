@@ -69,6 +69,11 @@ form span {
     background-color: #bbb;
 }
 
+.field-container label:hover {
+    background-color: #c44911;
+    color: #fafafa;
+}
+
 .field-container input {
     margin-bottom: 10px;
     padding: 10px;
@@ -76,7 +81,7 @@ form span {
 }
 
 .field-container button {
-    padding: 10px;
+    padding: 15px;
     margin: 10px;
     border-radius: 7px;
     font-family: 'Lato', sans-serif;
