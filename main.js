@@ -8,16 +8,17 @@ window.onload = function () {
 	function fullNameError(e) {
 
 		var name = e.target.value;
+		var nameHasNumber = hasNumber(name);
 
 		if (name === '') {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
 			messageNameError.innerText = 'This field is requiered';
-		} else if (name.length < 6 || name.indexOf(' ') === -1 || !(0 < name.indexOf(' ') < name.length-1) {
+		} else if (nameHasNumber || name.length < 6 || name.indexOf(' ') === -1 || !(0 < name.indexOf(' ') < name.length-1)) {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
-			messageNameError.innerText = 'Invalid input. Your full name must be more than six characters long and ' +
-			'contain at least one blank space in between'
+			messageNameError.innerText = 'Invalid input. Your full name must be more than six characters long, no numbers'
+			+ ' and contain at least one blank space in between'
 		} else {
 			messageNameError.className = 'hidden';
 		} 
@@ -130,7 +131,7 @@ window.onload = function () {
 
 		var phoneNumber = e.target.value;
 		 var phoneRegEx = /^[0-9]{7,}$/;
-		 
+
 		if (phoneNumber === "") {
 			phone.className = 'field-error';
 			messagePhoneError.className = 'error';
@@ -172,4 +173,43 @@ window.onload = function () {
 	}
 
 	address.addEventListener('blur', addressError);
+
+	// City field validation
+
+	var city = document.querySelector('#city');
+	var messageCityError = document.querySelector('#city-error');
+	
+
+	function cityError(e) {
+
+		var cityName = e.target.value;
+		var cityHasNumber = hasNumber(cityName);
+
+		if (cityName === '') {
+			city.className = 'field-error';
+			messageCityError.className = 'error';
+			messageCityError.innerText = 'This field is requiered';
+		} else if (cityHasNumber || cityName.length < 3) {
+			city.className = 'field-error';
+			messageCityError.className = 'error';
+			messageCityError.innerText = 'Invalid input. City must have at least three characters'
+		} else {
+			messageCityError.className = 'hidden';
+		}
+	}
+		
+	function hasNumber(fieldInput) {
+
+		var num = "012345679";
+		num_found = false;
+
+		for (var i = 0; i < fieldInput.length; i++) {
+		  if (num.includes(fieldInput[i])) {
+			num_found = true;
+		  }
+		}
+		return num_found;
+	};
+
+	city.addEventListener('blur', cityError);
 }
