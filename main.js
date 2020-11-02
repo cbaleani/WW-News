@@ -212,4 +212,31 @@ window.onload = function () {
 	};
 
 	city.addEventListener('blur', cityError);
+
+
+	// Postal-Code field validation
+
+	var postalCode = document.querySelector('#postal-code');
+	var messagePostalError = document.querySelector('#postal-error');
+	
+
+	function postalCodeError(e) {
+
+		var postalCodeName = e.target.value;
+
+		if (postalCodeName === '') {
+			postalCode.className = 'field-error';
+			messagePostalError.className = 'error';
+			messagePostalError.innerText = 'This field is requiered';
+		} else if (postalCodeName.length < 3) {
+			postalCode.className = 'field-error';
+			messagePostalError.className = 'error';
+			messagePostalError.innerText = 'Invalid input. Postal Code must have at least three characters'
+		} else {
+			messagePostalError.className = 'hidden';
+		}
+	}
+
+	postalCode.addEventListener('blur', postalCodeError);
 }
+
