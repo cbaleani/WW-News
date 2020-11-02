@@ -11,6 +11,7 @@ footer {
 }
 .icons {
     display: flex;
+    justify-content: space-around;
     padding-inline-start: 0;
     padding-top: 20px;
     border-top: 2px solid #ddd;
@@ -21,7 +22,7 @@ footer {
 }
 
 .icons i {
-    padding: 20px;
+    padding: 15px;
     background-color: #fafafa;
     border: 1px solid #fafafa;
     font-size: xx-large;
@@ -82,6 +83,7 @@ footer {
 .minor-info a {
     padding: 10px;
     margin: 5px;
+    width: 120px;
     background-color: #fafafa;
     border: 1px solid #d2d2d2;
     font-weight: 700;

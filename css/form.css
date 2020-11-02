@@ -5,10 +5,24 @@ body {
 
 form {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
+.row fieldset {
+    display: flex;
+    flex-basis: 35%;
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 0 5px;
+    border: 0;
+}
 .icon-and-title {
     display: flex;
     flex-direction: column;
@@ -54,10 +68,8 @@ form p {
 }
 
 .field-container {
-    flex-basis: 47%;
     display: flex;
     flex-direction: column;
-    width: auto;
     margin: 0 15px;
 }
 
@@ -67,6 +79,9 @@ form p {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
     background-color: #bbb;
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    border-left: 1px solid #aaa;
 }
 
 .field-container label:hover {
@@ -81,8 +96,11 @@ form p {
 }
 
 .field-container button {
+    align-self: center;
+    width: 50%;
     padding: 15px;
     margin: 10px;
+    align-self: center;
     border-radius: 7px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
@@ -109,7 +127,7 @@ form p {
     padding: 5px;
     font-family: 'Lato', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #8b0000;
     border-radius: 3px;
     background-color: #f0dfdf;

@@ -4,27 +4,38 @@ window.onload = function () {
 
 	var fullName = document.querySelector('#full-name');
 	var messageNameError = document.querySelector('#name-error');
+	var name = fullName.value;
 	
-	function fullNameError(e) {
-
-		var name = e.target.value;
+	function fullNameError() {
+			
 		var nameHasNumber = hasNumber(name);
 
 		if (name === '') {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
 			messageNameError.innerText = 'This field is requiered';
+		  return false;
 		} else if (nameHasNumber || name.length < 6 || name.indexOf(' ') === -1 || !(0 < name.indexOf(' ') < name.length-1)) {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
 			messageNameError.innerText = 'Invalid input. Your full name must be more than six characters long, no numbers'
 			+ ' and contain at least one blank space in between'
+			return false;
 		} else {
 			messageNameError.className = 'hidden';
+			return true;
 		} 
 	}
 
-	fullName.addEventListener('blur', fullNameError);
+	var validName = fullName.addEventListener('blur', fullNameError);
+	console.log(validName);
+
+	function fixNameError() {
+		fullName.className = 'input-field';
+		messageNameError.className = 'hidden';
+	}
+
+	fullName.addEventListener('focus', fixNameError);
 
 	// Email field validation
 
@@ -50,6 +61,13 @@ window.onload = function () {
 	}
 	
 	email.addEventListener('blur', emailError);
+
+	function fixEmailError() {
+		email.className = 'input-field';
+		messageEmailError.className = 'hidden';
+	}
+
+	email.addEventListener('focus', fixEmailError);
 
 	// Password filed validation
 
@@ -77,6 +95,13 @@ window.onload = function () {
 
 	password.addEventListener('blur', passError);
 
+	function fixPassError() {
+		password.className = 'input-field';
+		messagePassError.className = 'hidden';
+	}
+
+	password.addEventListener('focus', fixPassError);
+
 	// Re-enter password validation
 	
 	var passwordConfirmation = document.querySelector('#password-confirmation');
@@ -102,6 +127,12 @@ window.onload = function () {
 
 	passwordConfirmation.addEventListener('blur', passConfirmation);
 
+	function fixPassConfirmationError() {
+		passwordConfirmation.className = 'input-field';
+		messageConfirmationError.className = 'hidden';
+	}
+	passwordConfirmation.addEventListener('focus', fixPassConfirmationError);
+
 	// Age field validation
 
 	var age = document.querySelector('#age');
@@ -114,13 +145,19 @@ window.onload = function () {
 		if (!Number.isInteger(ageNumber) && ageNumber < 18) {
 			age.className = 'field-error';
 			messageAgeError.className = 'error';
-			messageAgeError.innerText = 'Invalid input. Age must be an integer number and greater than 18.';
+			messageAgeError.innerText = 'Invalid input. Age must be a number greater than 18';
 		} else {
 			messageAgeError.className = 'hidden';
 		}
 	}
-
 	age.addEventListener('blur', ageError);
+
+	function fixAgeError() {
+		age.className = 'input-field';
+		messageAgeError.className = 'hidden';
+	}
+	age.addEventListener('focus', fixAgeError);
+
 
 	// Phone Number field validation
 
@@ -148,6 +185,12 @@ window.onload = function () {
 
 	phone.addEventListener('blur', phoneError);
 
+	function fixPhoneError() {
+		phone.className = 'input-field';
+		messagePhoneError.className = 'hidden';
+	}
+	phone.addEventListener('focus', fixPhoneError);
+
 	// Address field validation
 
 	var address = document.querySelector('#address');
@@ -173,6 +216,12 @@ window.onload = function () {
 	}
 
 	address.addEventListener('blur', addressError);
+
+	function fixAddressError() {
+		address.className = 'input-field';
+		messageAddressError.className = 'hidden';
+	}
+	address.addEventListener('focus', fixAddressError);
 
 	// City field validation
 
@@ -213,6 +262,12 @@ window.onload = function () {
 
 	city.addEventListener('blur', cityError);
 
+	function fixCityError() {
+		city.className = 'input-field';
+		messageCityError.className = 'hidden';
+	}
+	city.addEventListener('focus', fixCityError);
+
 
 	// Postal-Code field validation
 
@@ -239,6 +294,12 @@ window.onload = function () {
 
 	postalCode.addEventListener('blur', postalCodeError);
 
+	function fixPostalError() {
+		postalCode.className = 'input-field';
+		messagePostalError.className = 'hidden';
+	}
+	postalCode.addEventListener('focus', fixPostalError);
+
 	// DNI field validation
 
 	var dniNumber = document.querySelector('#dni');
@@ -259,5 +320,22 @@ window.onload = function () {
 	}
 
 	dniNumber.addEventListener('blur', DniError);
-}
 
+	function fixDniError() {
+		dniNumber.className = 'input-field';
+		messageDniError.className = 'hidden';
+	}
+	dniNumber.addEventListener('focus', fixDniError);
+
+	// Submit
+	var button = document.querySelector('#button');
+
+	function send(e) {
+		e.preventDefault();
+		if (validName) {
+			console.log(e.type);
+		}
+	}
+
+	button.addEventListener('click', send);
+}
