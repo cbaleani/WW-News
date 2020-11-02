@@ -238,5 +238,26 @@ window.onload = function () {
 	}
 
 	postalCode.addEventListener('blur', postalCodeError);
+
+	// DNI field validation
+
+	var dniNumber = document.querySelector('#dni');
+	var messageDniError = document.querySelector('#dni-error');
+	
+
+	function DniError(e) {
+
+		var dniName = e.target.value;
+		
+		if (dniName.toString().length !== 8 && dniName.toString().length !== 7) {
+			dniNumber.className = 'field-error';
+			messageDniError.className = 'error';
+			messageDniError.innerText = 'Invalid input. DNI number must have seven or eight digits'
+		} else {
+			messageDniError.className = 'hidden';
+		}
+	}
+
+	dniNumber.addEventListener('blur', DniError);
 }
 
