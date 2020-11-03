@@ -19,6 +19,7 @@ window.onload = function () {
 			'and contain at least one blank space in between.'
 		} else {
 			messageNameError.className = 'hidden';
+			messageNameError.innerText = '';
 		} 
 	}
 	fullName.addEventListener('blur', nameValidation);
@@ -48,6 +49,7 @@ window.onload = function () {
 			messageEmailError.innerText = 'Email: invalid input.';
 		} else {
 			messageEmailError.className = 'hidden';
+			messageEmailError.innerText = '';
 		}
 	}	
 	email.addEventListener('blur', emailValidation);
@@ -61,7 +63,7 @@ window.onload = function () {
 	// Password filed validation
 
 	var password = document.querySelector('#password');
-	var messagePassError = document.querySelector('#password-error');
+	var messagePasswordError = document.querySelector('#password-error');
 
 	function passwordValidation() {
 		var passwordValue = password.value;
@@ -69,22 +71,23 @@ window.onload = function () {
 
 		if (passwordValue === '') {
 			password.className = 'field-error';
-			messagePassError.className = 'error';
-			messagePassError.innerText = 'Password is required.';
+			messagePasswordError.className = 'error';
+			messagePasswordError.innerText = 'Password is required.';
 		} else if (!(passwordRegEx.test(passwordValue))) {
 				password.className = 'field-error';
-				messagePassError.className = 'error';
-				messagePassError.innerText = 'Password: Invalid input. The password must contains at least eight characters ' +
+				messagePasswordError.className = 'error';
+				messagePasswordError.innerText = 'Password: Invalid input. The password must contains at least eight characters ' +
 				'and include both numbers and letters.'	
 		} else {
-			messagePassError.className = 'hidden';
+			messagePasswordError.className = 'hidden';
+			messagePasswordError.innerText = '';
 		}
 	}	
 	password.addEventListener('blur', passwordValidation);
 
 	function fixPassError() {
 		password.className = 'input-field';
-		messagePassError.className = 'hidden';
+		messagePasswordError.className = 'hidden';
 	}
 	password.addEventListener('focus', fixPassError);
 
@@ -107,6 +110,7 @@ window.onload = function () {
 			messagePasswordConfirmationError.innerText = 'Password confirmation: invalid input. Passwords must match.';
 		} else {
 			messagePasswordConfirmationError.className = 'hidden';
+			messagePasswordConfirmationError.innerText = '';
 		}
 	}
 	passwordConfirmation.addEventListener('blur', passwordConfirmationValidation);
@@ -134,6 +138,7 @@ window.onload = function () {
 			messageAgeError.innerText = 'Age: Invalid input. Age must be a number greater than 18.';
 		} else {
 			messageAgeError.className = 'hidden';
+			messageAgeError.innerText = '';
 		}
 	}
 	age.addEventListener('blur', ageValidation);
@@ -164,6 +169,7 @@ window.onload = function () {
 			'contain only numbers.';
 		} else {
 			messagePhoneError.className = 'hidden';
+			messagePhoneError.innerText = '';
 		}
 	}
 	phone.addEventListener('blur', phoneValidation);
@@ -193,6 +199,7 @@ window.onload = function () {
 			' contain a blank space in between.';
 		} else {
 			messageAddressError.className = 'hidden';
+			messageAddressError.innerText = '';
 		}
 	}
 	address.addEventListener('blur', addressValidation);
@@ -224,6 +231,7 @@ window.onload = function () {
 			messageCityError.innerText = 'City: Invalid input. City must have at least three characters and no numbers.'
 		} else {
 			messageCityError.className = 'hidden';
+			messageCityError.innerText = '';
 		}
 	}
 		
@@ -264,6 +272,7 @@ window.onload = function () {
 			messagePostalCodeError.innerText = 'Postal Code: Invalid input. Postal Code must have at least three characters.'
 		} else {
 			messagePostalCodeError.className = 'hidden';
+			messagePostalCodeError.innerText = '';
 		}
 	}
 	postalCode.addEventListener('blur', postalCodeValidation);
@@ -292,6 +301,7 @@ window.onload = function () {
 			messageDniError.innerText = 'ID Number - DNI: Invalid input. DNI number must have seven or eight digits.'
 		} else {
 			messageDniError.className = 'hidden';
+			messageDniError.innerText = '';
 		}
 	}
 	dniNumber.addEventListener('blur', dniValidation);
