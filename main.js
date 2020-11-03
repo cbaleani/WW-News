@@ -15,8 +15,8 @@ window.onload = function () {
 		} else if (nameHasNumber || name.length < 6 || name.indexOf(' ') === -1 || !(0 < name.indexOf(' ') < name.length-1)) {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
-			messageNameError.innerText = 'Full name: Invalid input. Full name must be more than six characters long, no 
-			+ ' numbers and contain at least one blank space in between.'
+			messageNameError.innerText = 'Full name: Invalid input. Full name must be more than six characters long,' + 
+			'numbers and contain at least one blank space in between.'
 		} else {
 			messageNameError.className = 'hidden';
 		} 
@@ -72,10 +72,10 @@ window.onload = function () {
 			messagePassError.className = 'error';
 			messagePassError.innerText = 'The Password field is required.';
 		} else if (!(passwordRegEx.test(passwordName))) {
-			password.className = 'field-error';
-			messagePassError.className = 'error';
-			messagePassError.innerText = 'Invalid input. The password must contains at least eight characters and ' +
-			'include both numbers and letters.'
+				password.className = 'field-error';
+				messagePassError.className = 'error';
+				messagePassError.innerText = 'Invalid input. The password must contains at least eight characters and ' +
+				'include both numbers and letters.'	
 		} else {
 			messagePassError.className = 'hidden';
 		}
