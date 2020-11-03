@@ -5,18 +5,18 @@ window.onload = function () {
 	var messageNameError = document.querySelector('#name-error');
 	
 	function nameValidation() {
-		var name = fullName.value;
-		var nameHasNumber = hasNumber(name);
+		var nameValue = fullName.value;
+		var nameHasNumber = hasNumber(nameValue);
 		
-		if (name === '') {
+		if (nameValue === '') {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
 			messageNameError.innerText = 'Full Name is required.';
-		} else if (nameHasNumber || name.length < 6 || name.indexOf(' ') === -1 || !(0 < name.indexOf(' ') < name.length-1)) {
+		} else if (nameHasNumber || nameValue.length < 6 || nameValue.indexOf(' ') === -1 || !(0 < nameValue.indexOf(' ') < nameValue.length-1)) {
 			fullName.className = 'field-error';
 			messageNameError.className = 'error';
-			messageNameError.innerText = 'Full name: Invalid input. Full name must be more than six characters long,' + 
-			'numbers and contain at least one blank space in between.'
+			messageNameError.innerText = 'Full name: Invalid input. Full name must be more than six characters, no numbers, ' +
+			'and contain at least one blank space in between.'
 		} else {
 			messageNameError.className = 'hidden';
 		} 
@@ -45,7 +45,7 @@ window.onload = function () {
 		} else if (!(emailRegEx.test(emailValue))) {
 			email.className = 'field-error';
 			messageEmailError.className = 'error';
-			messageEmailError.innerText = 'Invalid email.';
+			messageEmailError.innerText = 'Email: invalid input.';
 		} else {
 			messageEmailError.className = 'hidden';
 		}
@@ -70,12 +70,12 @@ window.onload = function () {
 		if (passwordValue === '') {
 			password.className = 'field-error';
 			messagePassError.className = 'error';
-			messagePassError.innerText = 'The Password field is required.';
+			messagePassError.innerText = 'Password is required.';
 		} else if (!(passwordRegEx.test(passwordValue))) {
 				password.className = 'field-error';
 				messagePassError.className = 'error';
-				messagePassError.innerText = 'Invalid input. The password must contains at least eight characters and ' +
-				'include both numbers and letters.'	
+				messagePassError.innerText = 'Password: Invalid input. The password must contains at least eight characters ' +
+				'and include both numbers and letters.'	
 		} else {
 			messagePassError.className = 'hidden';
 		}
@@ -91,7 +91,7 @@ window.onload = function () {
 	// Re-enter password validation
 	
 	var passwordConfirmation = document.querySelector('#password-confirmation');
-	var messageConfirmationError = document.querySelector('#password-confirmation-error');
+	var messagePasswordConfirmationError = document.querySelector('#password-confirmation-error');
 
 	function passwordConfirmationValidation() {
 		var passwordFirstEntryValue = password.value;
@@ -99,21 +99,21 @@ window.onload = function () {
 
 		if (passwordConfirmationValue === '') {
 			passwordConfirmation.className = 'field-error';
-			messageConfirmationError.className = 'error';
-			messageConfirmationError.innerText = 'Confirm password is required.';
+			messagePasswordConfirmationError.className = 'error';
+			messagePasswordConfirmationError.innerText = 'Confirm password is required.';
 		} else if (passwordConfirmationValue !== passwordFirstEntryValue) {
 			passwordConfirmation.className = 'field-error';
-			messageConfirmationError.className = 'error';
-			messageConfirmationError.innerText = 'Passwords must match.';
+			messagePasswordConfirmationError.className = 'error';
+			messagePasswordConfirmationError.innerText = 'Password confirmation: invalid input. Passwords must match.';
 		} else {
-			messageConfirmationError.className = 'hidden';
+			messagePasswordConfirmationError.className = 'hidden';
 		}
 	}
 	passwordConfirmation.addEventListener('blur', passwordConfirmationValidation);
 
 	function fixPasswordConfirmationError() {
 		passwordConfirmation.className = 'input-field';
-		messageConfirmationError.className = 'hidden';
+		messagePasswordConfirmationError.className = 'hidden';
 	}
 	passwordConfirmation.addEventListener('focus', fixPasswordConfirmationError);
 
@@ -127,11 +127,11 @@ window.onload = function () {
 		if (ageValue === '') {
 			age.className = 'field-error';
 			messageAgeError.className = 'error';
-			messageAgeError.innerText = 'Age specification is required.';
+			messageAgeError.innerText = 'Age is required.';
 		} else if (!Number.isInteger(ageValue) && ageValue < 18) {
 			age.className = 'field-error';
 			messageAgeError.className = 'error';
-			messageAgeError.innerText = 'Invalid input. Age must be a number greater than 18.';
+			messageAgeError.innerText = 'Age: Invalid input. Age must be a number greater than 18.';
 		} else {
 			messageAgeError.className = 'hidden';
 		}
@@ -156,12 +156,12 @@ window.onload = function () {
 		if (phoneValue === '') {
 			phone.className = 'field-error';
 			messagePhoneError.className = 'error';
-			messagePhoneError.innerText = 'Phone number is required.';
+			messagePhoneError.innerText = 'Phone Number is required.';
 		} else if (!(phoneRegEx.test(phoneValue))) {
 			phone.className = 'field-error';
 			messagePhoneError.className = 'error';
-			messagePhoneError.innerText = 'Invalid input. Phone must have a minimum length of seven digits and contain'+
-			' only numbers.';
+			messagePhoneError.innerText = 'Phone Number: Invalid input. Phone must have a minimum length of seven digits and ' +
+			'contain only numbers.';
 		} else {
 			messagePhoneError.className = 'hidden';
 		}
@@ -189,7 +189,7 @@ window.onload = function () {
 		} else if (addressValue.length < 5 || addressValue.indexOf(' ') === -1 || !(0 < addressValue.indexOf(' ') < addressValue.length-1)) {
 			address.className = 'field-error';
 			messageAddressError.className = 'error';
-			messageAddressError.innerText = 'Invalid input. Address must have a minimum length of five characters and' +
+			messageAddressError.innerText = 'Address: invalid input. Address must have a minimum length of five characters and' +
 			' contain a blank space in between.';
 		} else {
 			messageAddressError.className = 'hidden';
@@ -217,11 +217,11 @@ window.onload = function () {
 		if (cityValue === '') {
 			city.className = 'field-error';
 			messageCityError.className = 'error';
-			messageCityError.innerText = 'City specification is required.';
+			messageCityError.innerText = 'City is required.';
 		} else if (cityHasNumber || cityValue.length < 3) {
 			city.className = 'field-error';
 			messageCityError.className = 'error';
-			messageCityError.innerText = 'Invalid input. City must have at least three characters.'
+			messageCityError.innerText = 'City: Invalid input. City must have at least three characters and no numbers.'
 		} else {
 			messageCityError.className = 'hidden';
 		}
@@ -261,7 +261,7 @@ window.onload = function () {
 		} else if (postalCodeValue.length < 3) {
 			postalCode.className = 'field-error';
 			messagePostalCodeError.className = 'error';
-			messagePostalCodeError.innerText = 'Invalid input. Postal Code must have at least three characters.'
+			messagePostalCodeError.innerText = 'Postal Code: Invalid input. Postal Code must have at least three characters.'
 		} else {
 			messagePostalCodeError.className = 'hidden';
 		}
@@ -285,11 +285,11 @@ window.onload = function () {
 		if (dniValue === '') {
 			dniNumber.className = 'field-error';
 			messageDniError.className = 'error';
-			messageDniError.innerText = 'DNI number is required.';
+			messageDniError.innerText = 'DNI Number is required.';
 		} else if (dniValue.toString().length !== 8 && dniValue.toString().length !== 7) {
 			dniNumber.className = 'field-error';
 			messageDniError.className = 'error';
-			messageDniError.innerText = 'Invalid input. DNI number must have seven or eight digits.'
+			messageDniError.innerText = 'ID Number - DNI: Invalid input. DNI number must have seven or eight digits.'
 		} else {
 			messageDniError.className = 'hidden';
 		}
@@ -345,7 +345,7 @@ window.onload = function () {
 		cityValidation();
 		postalCodeValidation();
 		dniValidation();
-	
+		
 		var errorTextAccumulator = '';
 
 		errorSpanIdsArray.forEach(function(errorSpanId) {

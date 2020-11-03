@@ -23,6 +23,7 @@ form {
     padding: 0 5px;
     border: 0;
 }
+
 .icon-and-title {
     display: flex;
     flex-direction: column;
